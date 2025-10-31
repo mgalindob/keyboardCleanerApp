@@ -27,6 +27,7 @@
 		63493DE32EB436A900C0EF89 /* keyboardCleanerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = keyboardCleanerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63493DF02EB436AA00C0EF89 /* keyboardCleanerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = keyboardCleanerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63493DFA2EB436AA00C0EF89 /* keyboardCleanerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = keyboardCleanerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		636B95CE2EB45E0A0038E1A1 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +76,7 @@
 		63493DDA2EB436A900C0EF89 = {
 			isa = PBXGroup;
 			children = (
+				636B95CE2EB45E0A0038E1A1 /* LICENSE */,
 				63493DE52EB436A900C0EF89 /* keyboardCleanerApp */,
 				63493DF32EB436AA00C0EF89 /* keyboardCleanerAppTests */,
 				63493DFD2EB436AA00C0EF89 /* keyboardCleanerAppUITests */,
