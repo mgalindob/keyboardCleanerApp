@@ -13,5 +13,7 @@ struct keyboardCleanerAppApp: App {
         WindowGroup {
             ContentView()
         }
+        .windowResizability(.contentSize)
+        .windowToolbarStyle(.unified)
     }
 }

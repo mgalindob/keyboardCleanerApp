@@ -23,12 +23,36 @@ final class keyboardCleanerAppUITests: XCTestCase {
     }
 
     @MainActor
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func testAppLaunches() throws {
+        // Verify the app launches and key UI elements are present
         let app = XCUIApplication()
         app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        XCTAssertTrue(app.staticTexts["Keyboard Cleaner"].exists, "App title should be visible")
+        XCTAssertTrue(app.staticTexts["Keyboard Status:"].exists, "Status label should be visible")
+        XCTAssertTrue(app.staticTexts["Instructions:"].exists, "Instructions should be visible")
+    }
+    
+    @MainActor
+    func testInitialKeyboardState() throws {
+        let app = XCUIApplication()
+        app.launch()
+        
+        // Verify keyboard starts in enabled state
+        XCTAssertTrue(app.staticTexts["ENABLED"].exists, "Keyboard should initially be enabled")
+        XCTAssertTrue(app.buttons["Disable Keyboard"].exists, "Disable button should be available")
+        XCTAssertFalse(app.staticTexts["🧽 Safe to clean your keyboard!"].exists, "Clean message should not show initially")
+    }
+    
+    @MainActor
+    func testDisableButtonExists() throws {
+        let app = XCUIApplication()
+        app.launch()
+        
+        // Test that the main disable button is present and can be interacted with
+        let disableButton = app.buttons["Disable Keyboard"]
+        XCTAssertTrue(disableButton.exists, "Disable keyboard button should exist")
+        XCTAssertTrue(disableButton.isEnabled, "Disable keyboard button should be enabled")
     }
 
     @MainActor
